@@ -8,8 +8,7 @@
    \let\@evenfoot\@oddfoot
 }
 \makeatother
-\title{CoDesign of Learning Analytics Dashboards}
-\author{...}
+\title{Participatory Design of Learning Analytics Dashboards}
 \date{January 2021}
  
 \usepackage{natbib}
@@ -18,9 +17,11 @@
 \usepackage[hmargin=3cm]{geometry}  
 \linespread{1.3}
 \begin{document}
+\begin{abstract}
+    While the field of Learning Analytics is in full development, potential users are just discovering the opportunities offered by these tools. One of the major difficulties consists in proposing a visual data representation which makes sense to the users. After refining our method to identify user needs in terms of visualization, and to define the main dimensions of a learning dashboard, we propose a tool to support participatory design. This tool is based on a canvas and cards to help dashboards’ creation using Learning Analytics. It allows users to support creativity around decision making, characterize their context, and draw a dashboard’s mockup using existing content.
+\end{abstract}
 
 \maketitle
-
 \section{Introduction} 
 The design and evaluation of learning dashboards is a major area of inquiry in learning analytics research.
 Learning analytics dashboards are designed to use learners' traces to present the computed indicators and other visual elements in a clear and intuitive way \citep{Brouns2015}.
@@ -40,15 +41,19 @@ Within a single display, indicators and visualizations about learners, learning 
 Currently, they are increasingly deployed as a meaningful component in learning analysis systems. For instance, they are currently used in studying progression through courses \citep{Nicholson2012}, learners level of attainment~\citep{Gutierrez2012}, and learners' engagement from the cognitive and behavioral perspectives \citep{Carrillo2017}.
 Despite being fairly recent educational tools, the research found many benefits of using learning dashboards to improve learning performance \citep{Arnold2012} and to increase learners' motivation    \citep{Verbert2013, Wise2016}.
 
-\dots
+To glean as much information as possible about the context and needs of users, a common strategy is to use participatory design techniques where end-users are directly invited to participate in the design process.  Participatory Design for Learning is a growing field with its own history, philosophies, and body of techniques and methods \cite{disalvo2017participatory}. In practical terms, the LA researchers used a subset of techniques such as pre-interviewing end-users about  their needs to derive design ideas \cite{xhakaj2016teachers}, employing practitioner-partners as informant designers who give feedback on 
+designs \cite{fiorini2018application}, and engaging teachers throughout the prototyping process itself to create classroom analytics \cite{holstein2018classroom}.
 
+The ANR HUBBLE project (HUman Observatory Based on analysis of e-Learning traces) promotes the creation of a national observatory for the construction and sharing of processes related to the analysis of massive data from traces left in e-learning environments. The Hubble project thus covers the entire process including the collection of traces, the calculation of indicators, the description of the analysis process and the provision of indicators in the form of learning dashboards. Within the framework of the Hubble project, the definition of models for the dynamic generation of learning dashboards has highlighted an insufficient capture of user needs for a mapping with existing indicators. A precise understanding of these needs for their capitalization has therefore proved to be crucial.
 
-According to \citet{bennett2019four}, we can distinguish  three types of learner dashboards: predictive, modeler and descriptive. 
-\begin{itemize}
-    \item Predictive types use machine learning based on computer algorithms that rely on a series of trace data to predict the likelihood that the students outcomes. Many works in this category (i.e, \citep{arnold2014exercise}) use these algorithms to produce at risk rating for individual students.
-    \item For example, aspects of a student's online behaviours such as communication, initiative, presence that have been derived from the number of messages, the number of comments in response to others' messages, time spent online, etc., are not included in this section. 
-    \item The third type of dashboard is descriptive and displays past learning behaviours
-\end{itemize}
+In this context, three interconnected research questions emerge around the capture of needs:
+\begin{enumerate}
+    \item How can users of learning dashboards best express their needs in order to provide effective interfaces?
+    \item How to build on these needs in order to create a reference base of interfaces for the generation of learning dashboards?
+    \item Which models derived from user needs can be used to automatically generate effective dashboards?   
+\end{enumerate}
+
+This article focuses on the first question. It introduces a design space that serves as a basis for both the definition of the participatory design tool and the specification of models for capitalizing and generating learning dashboards. As the Hubble project is mainly oriented towards capitalization and reuse, the challenge is indeed to define models to organize the collected elements, following a knowledge engineering approach.
 
 \section{CoDesign of learning analytics dashboard}
 \subsection{User-centered design}
@@ -80,11 +85,6 @@ Arguing that the design paradigm of participatory design is constructivism,\cite
 \cite{siu2003users} describes the co-design process as a facilitator that directs the level of end-user awareness of design choices, providing professional advice and guidance on the consequences of alternative choices while end-users provide advice and contribute to the contextual experience.  Research suggests that including end-users in the design process ensures appropriate design responses that are aligned with end-user requirements \cite{taffe2015hybrid}. 
 
 
-To glean as much information as possible about the context and needs of users, 
-a common strategy is to use participatory design techniques where end-users are directly invited to participate in the design process. 
-Participatory Design for Learning is a growing field with its own history, philosophies, and body of techniques and methods \cite{disalvo2017participatory}. In practical terms, the LA researchers used a subset of techniques such as pre-interviewing end-users about 
-their needs to derive design ideas \cite{xhakaj2016teachers}, employing practitioner-partners as informant designers who give feedback on 
-designs \cite{fiorini2018application}, and engaging teachers throughout the prototyping process itself to create classroom analytics \cite{holstein2018classroom}.
 
 Different methods and techniques are being used to apply participatory design. The most popular include brainstorming exercises, card sorting, group affinity diagraming, rapid paper prototyping, wireframe walkthroughs, preferences testing \cite{abel2013cross}. 
 
@@ -119,19 +119,6 @@ Prinsloo, 2015), for tailoring support for learners (Madeline Huberth, Nicole Mi
 
 \section{Paddle: Participatory Design of Learning Analytics Dashboards}
 \subsection{Rationale and requirements for dashboard codesign}
-\subsubsection{Setting}
-The ANR HUBBLE project (HUman Observatory Based on analysis
-of e-Learning traces) intends to capitalize on the different stages of the massive data analysis processes related to learning. On the user interface level, the preliminary proposal for this project was to feature the automatic, dynamic generation of learning dashboards, associating the results of different indicators derived from the learning data, as a result of the analysis process. The first efforts \cite{dabbebi2017towards} have shown that the generation of such learning dashboards requires the definition of user needs models to allow a generation adapted to the intended use.
-
-In this context, three interconnected research questions emerge around the capture of needs:
-\begin{enumerate}
-    \item How can users of learning dashboards best express their needs in order to provide effective interfaces?
-    \item How to build on these needs in order to create a reference base of interfaces for the generation of learning dashboards?
-    \item Which models derived from user needs can be used to automatically generate effective dashboards?   
-\end{enumerate}
-
-This article focuses on the first question. It introduces a design space that serves as a basis for both the definition of the participatory design tool and the specification of models for capitalizing and generating learning dashboards. As the Hubble project is mainly oriented towards capitalization and reuse, the challenge is indeed to define models to organize the collected elements, following a knowledge engineering approach.
-
 \subsubsection{An iterative refinement process}
 \label{sec:dimensions}
 We have conducted an iterative process to develop our needscapture method. First we carried out a study to assess needs based on questionnaires and semi-directive interviews, and then, after evaluating  the findings of this first study, we organized a participatory workshop with the stakeholders.
